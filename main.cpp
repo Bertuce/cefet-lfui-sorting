@@ -27,7 +27,7 @@ Estatisticas Ordenar(unsigned long *v, unsigned long n)
     tempo1 = clock();
     //ordena o vetor
     // pode ser: Selecao, Insercao, QuickSort ou HeapSort
-    void (*algoritmoEscolhido)(unsigned long *, unsigned long, unsigned long *, unsigned long *) = Selecao;
+    void (*algoritmoEscolhido)(unsigned long *, unsigned long, unsigned long *, unsigned long *) = HeapSort;
     algoritmoEscolhido(v, n, &estatisticas.movimentacoes, &estatisticas.comparacoes);
     tempo2 = clock();
     estatisticas.tempo =  (double)(tempo2 - tempo1) / CLOCKS_PER_SEC;

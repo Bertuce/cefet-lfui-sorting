@@ -46,39 +46,22 @@ void Heap(unsigned long *v, long root, long bottom, unsigned long *mov, unsigned
   	}
 }
 
-
 void HeapSort(unsigned long *v, unsigned long n, unsigned long *mov, unsigned long *comp)
 {
-
 	long i, temp;
-
-
-
 	for (i = (n / 2)-1; i >= 0; i--)
-
     	Heap(v, i, n, mov, comp);
-
-
-
   	for (i = n-1; i >= 1; i--)
-
   	{
-
   		//mov+3
-
 		(*mov)++;
     	temp = v[0];
-
 		(*mov)++;
     	v[0] = v[i];
-
 		(*mov)++;
     	v[i] = temp;
-
     	Heap(v, 0, i-1, mov, comp);
-
   	}
-
 }
 
 
